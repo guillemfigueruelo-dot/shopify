@@ -1,68 +1,266 @@
-<section class="beneficios-grid" style="padding: 4rem 2rem; background-color: var(--color-background);">
-  <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Diseñado para la excelencia</h2>
-  
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+<section class="beneficios-section">
+  <div class="container">
+    <header class="beneficios-header">
+      <h2 class="beneficios-title">Diseñado para la excelencia</h2>
+      <p class="beneficios-subtitle">
+        Cada detalle del ZenDesk Pro ha sido cuidadosamente pensado para ofrecerte 
+        la mejor experiencia de trabajo y descanso.
+      </p>
+    </header>
     
-    <!-- Beneficio 1 -->
-    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
-      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      </div>
-      <h3 style="margin-bottom: 0.75rem;">Ergonomía Superior</h3>
-      <p style="font-size: 0.95rem; color: #666;">Ángulos ajustables para mantener tu columna en posición ideal.</p>
-    </div>
+    <div class="beneficios-grid">
+      
+      <!-- Beneficio 1: Ergonomía Superior -->
+      <article class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 8L8 18l20 10 20-10-20-10z"/>
+            <path d="M8 38l20 10 20-10"/>
+            <path d="M8 28l20 10 20-10"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Ergonomía Superior</h3>
+        <p class="benefit-description">
+          Ángulos ajustables diseñados para mantener tu columna en posición ideal 
+          y eliminar tensión cervical.
+        </p>
+      </article>
 
-    <!-- Beneficio 2 -->
-    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
-      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2= "21"/></svg>
-      </div>
-      <h3 style="margin-bottom: 0.75rem;">Material Premium</h3>
-      <p style="font-size: 0.95rem; color: #666;">Madera de alta calidad con acabados suaves al tacto.</p>
-    </div>
+      <!-- Beneficio 2: Material Premium -->
+      <article class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="10" width="44" height="30" rx="4"/>
+            <path d="M18 46h20"/>
+            <path d="M28 40v6"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Material Premium</h3>
+        <p class="benefit-description">
+          Madera de alta calidad con acabados suaves al tacto y resistencia 
+          probada para años de uso intensivo.
+        </p>
+      </article>
 
-    <!-- Beneficio 3 -->
-    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
-      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      </div>
-      <h3 style="margin-bottom: 0.75rem;">Estilo Minimalista</h3>
-      <p style="font-size: 0.95rem; color: #666;">Se integra perfectamente en cualquier dormitorio moderno.</p>
-    </div>
+      <!-- Beneficio 3: Estilo Minimalista -->
+      <article class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="28" cy="20" r="10"/>
+            <path d="M10 46c0-10 8-18 18-18s18 8 18 18"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Estilo Minimalista</h3>
+        <p class="benefit-description">
+          Diseño inspirado en IKEA × Apple que se integra perfectamente en 
+          cualquier dormitorio moderno.
+        </p>
+      </article>
 
-    <!-- Beneficio 4 -->
-    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
-      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-      </div>
-      <h3 style="margin-bottom: 0.75rem;">Montaje en Segundos</h3>
-      <p style="font-size: 0.95rem; color: #666;">Sin herramientas complicadas, listo para usar de inmediato.</p>
-    </div>
+      <!-- Beneficio 4: Montaje Instantáneo -->
+      <article class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 28h36"/>
+            <path d="M28 10l18 18-18 18"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Montaje en Segundos</h3>
+        <p class="benefit-description">
+          Sin herramientas complicadas ni instrucciones confusas. 
+          Despliega y ajusta en menos de 30 segundos.
+        </p>
+      </article>
 
-    <!-- Beneficio 5 -->
-    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
-      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      </div>
-      <h3 style="margin-bottom: 0.75rem;">Portabilidad Total</h3>
-      <p style="font-size: 0.95rem; color: #666;">Ligero y fácil de guardar bajo la cama o en un armario.</p>
-    </div>
+      <!-- Beneficio 5: Portabilidad Total -->
+      <article class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 10v24"/>
+            <path d="M20 26l8 8 8-8"/>
+            <rect x="14" y="34" width="28" height="8" rx="2"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Portabilidad Total</h3>
+        <p class="benefit-description">
+          Plegable y ultra ligero. Guárdalo bajo la cama, en el armario 
+          o llévalo contigo de viaje sin esfuerzo.
+        </p>
+      </article>
 
-    <!-- Beneficio 6 -->
-    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
-      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3 style="margin-bottom: 0.75rem;">Ultra Estable</h3>
-      <p style="font-size: 0.95rem; color: #666;">Diseño de base ancha para evitar cualquier tambaleo.</p>
-    </div>
+      <!-- Beneficio 6: Estabilidad Premium -->
+      <article class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 6l-20 16v20c0 2 2 4 4 4h32c2 0 4-2 4-4V22L28 6z"/>
+            <path d="M22 28l6 6 12-12"/>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Ultra Estable</h3>
+        <p class="benefit-description">
+          Base ancha con distribución inteligente de peso. 
+          Cero tambaleos incluso con laptops de 17 pulgadas.
+        </p>
+      </article>
 
+    </div>
   </div>
 </section>
 
 <style>
+  /* ============================================
+     BENEFICIOS SECTION - PREMIUM GRID
+     ============================================ */
+  
+  .beneficios-section {
+    background: linear-gradient(180deg, var(--color-bg-primary) 0%, #FFFFFF 50%, var(--color-bg-primary) 100%);
+    padding: var(--space-3xl) 0;
+  }
+
+  .beneficios-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .beneficios-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-md);
+    color: var(--color-text-primary);
+  }
+
+  .beneficios-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     BENEFICIOS GRID - RESPONSIVE CARDS
+     ============================================ */
+  
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ============================================
+     BENEFIT CARD - HOVER EFFECTS
+     ============================================ */
+  
+  .benefit-card {
+    background: #FFFFFF;
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: all var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent-warm) 0%, var(--color-cta-green) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-smooth);
+  }
+
   .benefit-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-strong);
+  }
+
+  .benefit-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* ============================================
+     ICON STYLING
+     ============================================ */
+  
+  .benefit-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border-radius: var(--radius-md);
+    color: var(--color-accent-warm);
+    transition: all var(--transition-base);
+  }
+
+  .benefit-card:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, var(--color-accent-warm) 0%, #D4A853 100%);
+    color: #FFFFFF;
+    box-shadow: 0 8px 16px rgba(212, 168, 83, 0.3);
+  }
+
+  /* ============================================
+     TEXT CONTENT
+     ============================================ */
+  
+  .benefit-title {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .benefit-description {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ============================================
+     MOBILE RESPONSIVE
+     ============================================ */
+  
+  @media (max-width: 768px) {
+    .beneficios-section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .beneficios-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .benefit-card {
+      padding: var(--space-lg);
+    }
+
+    .benefit-icon {
+      width: 56px;
+      height: 56px;
+    }
+
+    .benefit-icon svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .beneficios-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 </style>
 

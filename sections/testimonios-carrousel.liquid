@@ -1,33 +1,357 @@
-<section class="testimonios" style="padding: 4rem 2rem; background-color: var(--color-background); overflow: hidden;">
-  <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Lo que dicen nuestros clientes</h2>
-  
-  <div class="testimonial-wrapper" style="display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 2rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+<section class="testimonios-section">
+  <div class="container">
+    <header class="testimonios-header">
+      <h2 class="testimonios-title">Lo que dicen nuestros clientes</h2>
+      <p class="testimonios-subtitle">
+        Miles de personas ya están trabajando con comodidad y estilo gracias al ZenDesk Pro
+      </p>
+    </header>
     
-    {% for i in (1..5) %}
-    <div class="testimonial-card" style="flex: 0 0 300px; background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); scroll-snap-align: start;">
-      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-        <div style="width: 50px; height: 50px; border-radius: 50%; background-color: #ddd; overflow: hidden;">
-          <img src="https://i.pravatar.cc/150?u={{ i }}" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div>
-          <div style="font-weight: bold;">Cliente {{ i }}</div>
-          <div style="color: var(--color-accent); font-size: 0.8rem;">★★★★★</div>
-        </div>
+    <div class="testimonials-carousel-wrapper">
+      <div class="testimonials-track">
+        
+        <!-- Testimonio 1 -->
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Increíble. Mi productividad en el teletrabajo ha subido un 200%. 
+            Es justo lo que necesitaba para mi setup en la cama."
+          </p>
+          <div class="testimonial-author">
+            <img 
+              src="https://i.pravatar.cc/150?u=1" 
+              alt="Avatar de Ana M." 
+              class="author-avatar"
+              loading="lazy"
+            >
+            <div class="author-info">
+              <strong class="author-name">Ana M.</strong>
+              <span class="author-role">Diseñadora Freelance</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Testimonio 2 -->
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Lo mejor que he comprado este año. Mi dolor de espalda desapareció 
+            completamente. Además, el diseño es precioso y minimalista."
+          </p>
+          <div class="testimonial-author">
+            <img 
+              src="https://i.pravatar.cc/150?u=2" 
+              alt="Avatar de Carlos R." 
+              class="author-avatar"
+              loading="lazy"
+            >
+            <div class="author-info">
+              <strong class="author-name">Carlos R.</strong>
+              <span class="author-role">Desarrollador Web</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Testimonio 3 -->
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Estudiar para mis exámenes nunca fue tan cómodo. Se monta en 
+            segundos y no ocupa espacio cuando no lo uso. 10/10."
+          </p>
+          <div class="testimonial-author">
+            <img 
+              src="https://i.pravatar.cc/150?u=3" 
+              alt="Avatar de Laura S." 
+              class="author-avatar"
+              loading="lazy"
+            >
+            <div class="author-info">
+              <strong class="author-name">Laura S.</strong>
+              <span class="author-role">Estudiante Medicina</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Testimonio 4 -->
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Trabajo desde casa 8 horas al día y este escritorio cambió mi vida. 
+            Materiales de calidad premium y súper estable."
+          </p>
+          <div class="testimonial-author">
+            <img 
+              src="https://i.pravatar.cc/150?u=4" 
+              alt="Avatar de Miguel A." 
+              class="author-avatar"
+              loading="lazy"
+            >
+            <div class="author-info">
+              <strong class="author-name">Miguel A.</strong>
+              <span class="author-role">Consultor IT</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Testimonio 5 -->
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Relación calidad-precio insuperable. Lo recomiendo a todo el mundo 
+            que trabaje desde la cama o el sofá. Vale cada euro."
+          </p>
+          <div class="testimonial-author">
+            <img 
+              src="https://i.pravatar.cc/150?u=5" 
+              alt="Avatar de Patricia L." 
+              class="author-avatar"
+              loading="lazy"
+            >
+            <div class="author-info">
+              <strong class="author-name">Patricia L.</strong>
+              <span class="author-role">Content Creator</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Testimonio 6 -->
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">
+            "Mi pareja y yo compramos dos. El envío fue rápido y el producto 
+            llegó perfectamente embalado. Muy satisfechos."
+          </p>
+          <div class="testimonial-author">
+            <img 
+              src="https://i.pravatar.cc/150?u=6" 
+              alt="Avatar de David G." 
+              class="author-avatar"
+              loading="lazy"
+            >
+            <div class="author-info">
+              <strong class="author-name">David G.</strong>
+              <span class="author-role">Project Manager</span>
+            </div>
+          </div>
+        </article>
+
       </div>
-      <p style="font-style: italic; color: #555;">"Increíble. Mi productividad en el teletrabajo ha subido un 200%. Es justo lo que necesitaba para mi setup en la cama."</p>
     </div>
-    {% endfor %}
+
+    <!-- Social Proof Badge -->
+    <div class="social-proof-badge">
+      <strong>+12,450</strong> clientes satisfechos
+    </div>
 
   </div>
 </section>
 
 <style>
-  .testimonial-wrapper::-webkit-scrollbar {
-    height: 6px;
+  /* ============================================
+     TESTIMONIOS SECTION - SOCIAL PROOF
+     ============================================ */
+  
+  .testimonios-section {
+    background: var(--color-bg-secondary);
+    padding: var(--space-3xl) 0;
+    overflow: hidden;
   }
-  .testimonial-wrapper::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
+
+  .testimonios-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .testimonios-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-md);
+    color: var(--color-text-primary);
+  }
+
+  .testimonios-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ============================================
+     CAROUSEL - HORIZONTAL SCROLL
+     ============================================ */
+  
+  .testimonials-carousel-wrapper {
+    position: relative;
+    margin-bottom: var(--space-xl);
+  }
+
+  .testimonials-track {
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--space-md) var(--space-sm) var(--space-lg);
+    margin: 0 calc(var(--space-md) * -1);
+  }
+
+  /* Custom Scrollbar */
+  .testimonials-track::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .testimonials-track::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-full);
+  }
+
+  .testimonials-track::-webkit-scrollbar-thumb {
+    background: var(--color-accent-warm);
+    border-radius: var(--radius-full);
+    transition: background var(--transition-fast);
+  }
+
+  .testimonials-track::-webkit-scrollbar-thumb:hover {
+    background: #C4984D;
+  }
+
+  /* ============================================
+     TESTIMONIAL CARD - PREMIUM DESIGN
+     ============================================ */
+  
+  .testimonial-card {
+    flex: 0 0 340px;
+    background: #FFFFFF;
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    transition: all var(--transition-base);
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: var(--space-lg);
+    font-size: 6rem;
+    color: var(--color-accent-warm);
+    opacity: 0.1;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+  }
+
+  /* Stars */
+  .stars {
+    color: #FBBF24;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  /* Quote */
+  .testimonial-quote {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    font-style: italic;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  /* Author */
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: auto;
+  }
+
+  .author-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 3px solid var(--color-bg-secondary);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .author-name {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+  }
+
+  .author-role {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  /* ============================================
+     SOCIAL PROOF BADGE
+     ============================================ */
+  
+  .social-proof-badge {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-lg);
+  }
+
+  .social-proof-badge strong {
+    color: var(--color-accent-warm);
+    font-weight: var(--font-weight-bold);
+    font-size: 1.5rem;
+  }
+
+  /* ============================================
+     MOBILE RESPONSIVE
+     ============================================ */
+  
+  @media (max-width: 768px) {
+    .testimonios-section {
+      padding: var(--space-2xl) 0;
+    }
+
+    .testimonial-card {
+      flex: 0 0 300px;
+      padding: var(--space-lg);
+    }
+
+    .testimonials-track {
+      gap: var(--space-md);
+      padding: var(--space-sm) var(--space-sm) var(--space-md);
+    }
+
+    .social-proof-badge {
+      font-size: 1rem;
+    }
+
+    .social-proof-badge strong {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .testimonial-card {
+      flex: 0 0 280px;
+    }
   }
 </style>
 

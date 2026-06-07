@@ -1,13 +1,206 @@
-<section class="dolor-solucion" style="display: flex; flex-wrap: wrap; min-height: 60vh;">
-  <div class="pain-side" style="flex: 1; min-width: 300px; background-color: var(--color-pain-bg); padding: 4rem 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; filter: grayscale(100%); opacity: 0.8;">
-    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">¿Dolor de espalda y cuello al trabajar en la cama?</h2>
-    <p style="font-size: 1.1rem; max-width: 400px;">Posturas incómodas, falta de soporte y fatiga constante que arruinan tu productividad y tu descanso.</p>
+<section class="dolor-solucion">
+  
+  <!-- PAIN SIDE - Desaturado y gris -->
+  <div class="pain-side">
+    <div class="pain-content">
+      <div class="pain-icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="32" cy="32" r="30" stroke-dasharray="4 4"/>
+          <path d="M32 20v16m0 8h.01M20 44h24" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2 class="pain-title">El problema que conoces muy bien...</h2>
+      <p class="pain-description">
+        Trabajar desde la cama sin el soporte adecuado te destroza la espalda, 
+        te cansa el cuello y arruina tu productividad.
+      </p>
+      <ul class="pain-list">
+        <li>❌ Posturas incómodas que generan dolor</li>
+        <li>❌ Fatiga constante y baja concentración</li>
+        <li>❌ Diseños baratos que se rompen o tambalean</li>
+      </ul>
+    </div>
   </div>
-  <div class="solution-side" style="flex: 1; min-width: 300px; background-color: var(--color-solution-bg); padding: 4rem 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-left: 2px solid var(--color-accent);">
-    <h2 style="font-size: 2rem; color: var(--color-text); margin-bottom: 1.5rem;">La solución: ZenDesk Pro</h2>
-    <p style="font-size: 1.1rem; max-width: 400px; color: #444;">Ergonomía perfecta y soporte ajustable para que trabajes o navegues sin esfuerzo y con total estilo.</p>
+
+  <!-- SOLUTION SIDE - Cálido y dorado -->
+  <div class="solution-side">
+    <div class="solution-content">
+      <div class="solution-icon">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="32" cy="32" r="28"/>
+          <path d="M20 32l8 8 16-16" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2 class="solution-title">La solución: ZenDesk Pro</h2>
+      <p class="solution-description">
+        Diseño ergonómico premium que se ajusta a ti. Trabaja, estudia o navega 
+        con total comodidad, estilo y sin sacrificar tu salud.
+      </p>
+      <ul class="solution-list">
+        <li>✅ Ergonomía ajustable para postura correcta</li>
+        <li>✅ Materiales de alta calidad ultra resistentes</li>
+        <li>✅ Estilo minimalista que eleva tu espacio</li>
+      </ul>
+    </div>
   </div>
+
 </section>
+
+<style>
+  /* ============================================
+     DOLOR-SOLUCION - HIGH CONTRAST DESIGN
+     ============================================ */
+  
+  .dolor-solucion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+  }
+
+  /* ============================================
+     PAIN SIDE - Gris desaturado
+     ============================================ */
+  
+  .pain-side {
+    background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2xl) var(--space-lg);
+    position: relative;
+    filter: grayscale(60%);
+    opacity: 0.92;
+  }
+
+  .pain-content {
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .pain-icon {
+    color: #6B7280;
+    margin: 0 auto;
+    opacity: 0.7;
+  }
+
+  .pain-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #374151;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+  }
+
+  .pain-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #4B5563;
+    line-height: 1.6;
+  }
+
+  .pain-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: left;
+    font-size: 1rem;
+    color: #6B7280;
+    margin-top: var(--space-sm);
+  }
+
+  .pain-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  /* ============================================
+     SOLUTION SIDE - Cálido y dorado
+     ============================================ */
+  
+  .solution-side {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2xl) var(--space-lg);
+    position: relative;
+    border-left: 4px solid var(--color-accent-warm);
+  }
+
+  .solution-content {
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .solution-icon {
+    color: var(--color-accent-warm);
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 8px rgba(212, 168, 83, 0.3));
+  }
+
+  .solution-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+  }
+
+  .solution-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #92400E;
+    line-height: 1.6;
+  }
+
+  .solution-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: left;
+    font-size: 1rem;
+    color: #78350F;
+    margin-top: var(--space-sm);
+  }
+
+  .solution-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    font-weight: var(--font-weight-medium);
+  }
+
+  /* ============================================
+     MOBILE RESPONSIVE
+     ============================================ */
+  
+  @media (max-width: 768px) {
+    .dolor-solucion {
+      grid-template-columns: 1fr;
+    }
+
+    .pain-side,
+    .solution-side {
+      min-height: 50vh;
+      padding: var(--space-xl) var(--space-md);
+    }
+
+    .solution-side {
+      border-left: none;
+      border-top: 4px solid var(--color-accent-warm);
+    }
+
+    .pain-content,
+    .solution-content {
+      max-width: 100%;
+    }
+  }
+</style>
 
 {% schema %}
 {
