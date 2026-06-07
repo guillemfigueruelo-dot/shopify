@@ -1,23 +1,84 @@
-<section class="hero-section" style="padding: 4rem 2rem; text-align: center; background-color: var(--color-background);">
-  <div class="badge" style="display: inline-block; background-color: var(--color-accent); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: bold; margin-bottom: 1.5rem;">
-    🔥 ¡40% DE DESCUENTO SOLO HOY!
-  </div>
-  <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1rem; line-height: 1.1;">Trabaja con comodidad desde tu cama con ZenDesk Pro</h1>
-  <h2 style="font-size: clamp(1.2rem, 4vw, 1.8rem); color: #666; max-width: 800px; margin: 0 auto 2.5rem auto; font-weight: 400;">El escritorio multifuncional que transforma tu descanso en productividad extrema.</h2>
-  
-  <p class="microcopy" style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.8;">Diseño ergonómico, materiales premium y estilo minimalista.</p>
+<section class="hero-section" style="padding: 4rem 2rem; background-color: var(--color-background);">
+  <div class="hero-container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+    
+    <!-- Product Gallery (Assets based) -->
+    <div class="hero-gallery" style="flex: 1; min-width: 320px;">
+      <div class="gallery-wrapper" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        {% for i in (1..8) %}
+          <div class="gallery-item" style="aspect-ratio: 1/1; overflow: hidden; border-radius: 8px; background: #eee;">
+            <img src="{{ 'zen-pro-gallery-' | append: i | append: '.png' | asset_url }}" 
+                 alt="ZenDesk Pro {{ i }}" 
+                 loading="lazy"
+                 style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        {% endfor %}
+      </div>
+    </div>
 
-  <div class="hero-cta-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-    <form method="post" action="/cart/add" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-      <input type="hidden" name="id" value="123456789"> <!-- Placeholder product ID -->
-      <input type="hidden" name="quantity" value="1">
-      <button type="submit" class="button" style="font-size: 1.25rem; padding: 1.25rem 3rem;">
-        ¡QUIERO MI ZENDESK PRO AHORA!
-      </button>
-    </form>
-    <p style="font-size: 0.9rem; opacity: 0.6;">🚚 Envío rápido garantizado</p>
+    <!-- Hero Content -->
+    <div class="hero-content" style="flex: 1; min-width: 320px; text-align: left;">
+      <div class="badge" style="display: inline-block; background-color: var(--color-accent); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: bold; margin-bottom: 1.5rem;">
+        🔥 ¡40% DE DESCUENTO SOLO HOY!
+      </div>
+      <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem; line-height: 1.1;">Trabaja con comodidad desde tu cama con ZenDesk Pro</h1>
+      <h2 style="font-size: clamp(1.1rem, 3vw, 1.5rem); color: #666; margin-bottom: 1.5rem; font-weight: 400;">El escritorio multifuncional que transforma tu descanso en productividad extrema.</h2>
+      
+      <p class="microcopy" style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.8;">Diseño ergonómico, materiales premium y estilo minimalista.</p>
+
+      {% form 'product', product %}
+        <input type="hidden" name="id" id="hero-variant-id" value="{{ product.selected_or_first_available_variant.id }}">
+        
+        <div class="variant-selector" style="margin-bottom: 2rem;">
+          <p style="font-weight: 600; margin-bottom: 0.75rem;">Selecciona tu color:</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            {% comment %} 
+              Note: The following loop dynamically uses the product's variants. 
+              Ensure in Shopify Admin that variants are: White, Black, Pink, Walnut.
+            {% endcomment %}
+            {% for variant in product.variants %}
+              <label style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                <input type="radio" name="id" value="{{ variant.id }}" {% if forloop.first %}checked{% endif %} class="variant-radio" style="display: none;">
+                <span class="color-swatch" style="width: 35px; height: 35px; border-radius: 50%; border: 2px solid #eee; background-color: {{ variant.option1 | split: ' ' | last | handle }}; display: block;"></span>
+                <span style="font-size: 0.8rem; color: #444;">{{ variant.option1 }}</span>
+              </label>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="hero-cta-wrapper">
+          <button type="submit" name="add" class="button" style="width: 100%; font-size: 1.25rem; padding: 1.25rem 3rem;">
+            ¡QUIERO MI ZENDESK PRO AHORA!
+          </button>
+        </div>
+      {% endform %}
+      
+      <p style="font-size: 0.9rem; opacity: 0.6; margin-top: 1rem; text-align: left;">🚚 Envío rápido garantizado</p>
+    </div>
+
   </div>
 </section>
+
+<style>
+  .variant-radio:checked + .color-swatch {
+    border-color: var(--color-text) !important;
+    transform: scale(1.1);
+  }
+  .color-swatch {
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-content {
+      text-align: center;
+    }
+    .variant-selector div {
+      justify-content: center;
+    }
+  }
+</style>
 
 {% schema %}
 {
