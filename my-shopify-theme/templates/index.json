@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-landing",
+      "required": true
+    },
+    "dolor_solucion": {
+      "type": "dolor-solucion",
+      "required": false
+    },
+    "beneficios": {
+      "type": "beneficios-grid",
+      "required": false
+    },
+    "testimonios": {
+      "type": "testimonios-carrousel",
+      "required": false
+    },
+    "comparativa": {
+      "type": "tabla-comparativa",
+      "required": false
+    },
+    "oferta": {
+      "type": "oferta-incentivos",
+      "required": false
+    },
+    "faq": {
+      "type": "faq-acordeon",
+      "required": false
+    }
+  },
+  "order": [
+    "hero",
+    "dolor_solucion",
+    "beneficios",
+    "testimonios",
+    "comparativa",
+    "oferta",
+    "faq"
+  ]
+}

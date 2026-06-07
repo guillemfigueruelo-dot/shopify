@@ -1,0 +1,73 @@
+<section class="beneficios-grid" style="padding: 4rem 2rem; background-color: var(--color-background);">
+  <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Diseñado para la excelencia</h2>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Beneficio 1 -->
+    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">Ergonomía Superior</h3>
+      <p style="font-size: 0.95rem; color: #666;">Ángulos ajustables para mantener tu columna en posición ideal.</p>
+    </div>
+
+    <!-- Beneficio 2 -->
+    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2= "21"/></svg>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">Material Premium</h3>
+      <p style="font-size: 0.95rem; color: #666;">Madera de alta calidad con acabados suaves al tacto.</p>
+    </div>
+
+    <!-- Beneficio 3 -->
+    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">Estilo Minimalista</h3>
+      <p style="font-size: 0.95rem; color: #666;">Se integra perfectamente en cualquier dormitorio moderno.</p>
+    </div>
+
+    <!-- Beneficio 4 -->
+    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">Montaje en Segundos</h3>
+      <p style="font-size: 0.95rem; color: #666;">Sin herramientas complicadas, listo para usar de inmediato.</p>
+    </div>
+
+    <!-- Beneficio 5 -->
+    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">Portabilidad Total</h3>
+      <p style="font-size: 0.95rem; color: #666;">Ligero y fácil de guardar bajo la cama o en un armario.</p>
+    </div>
+
+    <!-- Beneficio 6 -->
+    <div class="benefit-card" style="background: white; padding: 2rem; border-radius: var(--radius-card); box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+      <div style="width: 48px; height: 48px; margin-bottom: 1.5rem; color: var(--color-accent);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3 style="margin-bottom: 0.75rem;">Ultra Estable</h3>
+      <p style="font-size: 0.95rem; color: #666;">Diseño de base ancha para evitar cualquier tambaleo.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .benefit-card:hover {
+    transform: translateY(-10px);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "beneficios-grid"
+}
+{% endschema %}

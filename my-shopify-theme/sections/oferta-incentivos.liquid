@@ -1,0 +1,48 @@
+<section class="oferta-incentivos" style="padding: 4rem 2rem; background-color: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center;">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">¡APROVECHA LA OFERTA LIMITADA!</h2>
+    
+    <div class="price-container" style="margin-bottom: 2rem;">
+      <span style="font-size: 1.5rem; text-decoration: line-through; color: #888; margin-right: 1rem;">€69,99</span>
+      <span style="font-size: 3.5rem; font-weight: bold; color: var(--color-text);">€39,99</span>
+    </div>
+
+    <div class="stock-container" style="margin-bottom: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem;">
+        <span>🔥 ¡Corre! Solo quedan <span id="stock-count" style="font-weight: bold; color: #e63946;">17</span> unidades.</span>
+        <span>82% Vendido</span>
+      </div>
+      <div style="width: 100%; background-color: #eee; height: 12px; border-radius: 6px; overflow: hidden;">
+        <div style="width: 82%; background-color: var(--color-accent); height: 100%;"></div>
+      </div>
+    </div>
+
+    <div class="urgency-box" style="background-color: var(--color-error-soft); padding: 1rem; border-radius: 8px; margin-bottom: 2rem;">
+      <p style="margin: 0; font-weight: 500; color: #c53030;">
+        ⏳ Esta oferta expira en: <span id="dynamic-date" style="font-weight: bold;">...</span>
+      </p>
+    </div>
+
+    <a href="/cart/add" class="button" style="width: 100%; font-size: 1.5rem; padding: 1.5rem;">
+      ¡SÍ, QUIERO MI DESCUENTO!
+    </a>
+  </div>
+
+  <script>
+    (function() {
+      // Calculamos la fecha dinámica (+3 días desde hoy)
+      const today = new Date();
+      const expiryDate = new Date();
+      expiryDate.setDate(today.getDate() + 3);
+
+      const options = { day: 'numeric', month: 'long', year: 'numeric' };
+      document.getElementById('dynamic-date').innerText = expiryDate.toLocaleDateString('es-ES', options);
+    })();
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "oferta-incentivos"
+}
+{% endschema %}

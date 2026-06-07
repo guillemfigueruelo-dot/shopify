@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.colors_accent }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    <title>{{ page_title }}</title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --color-background: #FAFAFA;
+        --color-text: #1A1A1A;
+        --color-accent: #D4A853;
+        --color-cta: #2D8F4E;
+        --font-sans: 'Inter', sans-serif;
+
+        /* Section Support Variables */
+        --color-pain-bg: #F3F4F6;
+        --color-solution-bg: #FFFBEB;
+        --color-error-soft: #FEE2E2;
+        --color-success-soft: #D1FAE5;
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --radius-card: 12px;
+      }
+
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+        font-family: var(--font-sans);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        font-weight: 600;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .button, .btn, .cta {
+        display: inline-block;
+        background-color: var(--color-cta);
+        color: #FFFFFF;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.2s ease;
+        cursor: pointer;
+        border: none;
+      }
+
+      .button:hover, .btn:hover, .cta:hover {
+        opacity: 0.9;
+      }
+
+      .accent-text {
+        color: var(--color-accent);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+  </body>
+</html>

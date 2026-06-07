@@ -1,0 +1,26 @@
+<section class="hero-section" style="padding: 4rem 2rem; text-align: center; background-color: var(--color-background);">
+  <div class="badge" style="display: inline-block; background-color: var(--color-accent); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: bold; margin-bottom: 1.5rem;">
+    🔥 ¡40% DE DESCUENTO SOLO HOY!
+  </div>
+  <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1rem; line-height: 1.1;">Trabaja con comodidad desde tu cama con ZenDesk Pro</h1>
+  <h2 style="font-size: clamp(1.2rem, 4vw, 1.8rem); color: #666; max-width: 800px; margin: 0 auto 2.5rem auto; font-weight: 400;">El escritorio multifuncional que transforma tu descanso en productividad extrema.</h2>
+  
+  <p class="microcopy" style="margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.8;">Diseño ergonómico, materiales premium y estilo minimalista.</p>
+
+  <div class="hero-cta-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+    <form method="post" action="/cart/add" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <input type="hidden" name="id" value="123456789"> <!-- Placeholder product ID -->
+      <input type="hidden" name="quantity" value="1">
+      <button type="submit" class="button" style="font-size: 1.25rem; padding: 1.25rem 3rem;">
+        ¡QUIERO MI ZENDESK PRO AHORA!
+      </button>
+    </form>
+    <p style="font-size: 0.9rem; opacity: 0.6;">🚚 Envío rápido garantizado</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "hero-landing"
+}
+{% endschema %}
