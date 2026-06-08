@@ -100,7 +100,10 @@
             
             <div class="summary-row">
               <span>Subtotal:</span>
-              <span id="cart-subtotal">€{{ cart.item_count | times: 39.99 | round: 2 }}</span>
+              <div class="summary-pricing">
+                <span id="cart-subtotal-original" class="price-original">€{{ cart.item_count | times: 69.99 | round: 2 }}</span>
+                <span id="cart-subtotal" class="price-sale">€{{ cart.item_count | times: 39.99 | round: 2 }}</span>
+              </div>
             </div>
 
             <div class="summary-row">
@@ -112,7 +115,10 @@
 
             <div class="summary-row summary-total">
               <span>Total:</span>
-              <span id="cart-total">€{{ cart.item_count | times: 39.99 | round: 2 }}</span>
+              <div class="summary-pricing text-right">
+                <span id="cart-total-original" class="price-original">€{{ cart.item_count | times: 69.99 | round: 2 }}</span>
+                <span id="cart-total" class="price-sale">€{{ cart.item_count | times: 39.99 | round: 2 }}</span>
+              </div>
             </div>
 
             <form action="/cart" method="post" id="cart-form">
@@ -121,7 +127,6 @@
               </button>
             </form>
 
-            <!-- Trust Badges -->
             <div class="trust-badges">
               <div class="trust-item">
                 <span>🔒</span>
@@ -162,6 +167,23 @@
 {% endif %}
 
 <style>
+.summary-pricing {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 8px);
+}
+
+.text-right {
+  justify-content: flex-end;
+}
+
+.summary-total .price-original {
+  font-size: 1.125rem; /* Un poco más grande para el total */
+}
+
+.summary-total .price-sale {
+  font-size: 1.5rem;
+}
   /* ============================================
      CART PAGE - PREMIUM DESIGN
      ============================================ */
@@ -620,19 +642,27 @@
   // CART FUNCTIONALITY - DYNAMIC UPDATES
   // ============================================
   (function() {
+    const ORIGINAL_PRICE = 69.99;
     const SALE_PRICE = 39.99;
 
     // Update cart totals
     function updateTotals() {
-      let total = 0;
+      let totalOriginal = 0;
+      let totalSale = 0;
+      
       document.querySelectorAll('.qty-input').forEach(input => {
         const qty = parseInt(input.value) || 0;
-        total += qty * SALE_PRICE;
+        totalOriginal += qty * ORIGINAL_PRICE;
+        totalSale += qty * SALE_PRICE;
       });
 
-      const formattedTotal = total.toFixed(2);
-      document.getElementById('cart-subtotal').textContent = '€' + formattedTotal;
-      document.getElementById('cart-total').textContent = '€' + formattedTotal;
+      // Actualizar precios de oferta (en verde)
+      document.getElementById('cart-subtotal').textContent = '€' + totalSale.toFixed(2);
+      document.getElementById('cart-total').textContent = '€' + totalSale.toFixed(2);
+      
+      // Actualizar precios originales (tachados)
+      document.getElementById('cart-subtotal-original').textContent = '€' + totalOriginal.toFixed(2);
+      document.getElementById('cart-total-original').textContent = '€' + totalOriginal.toFixed(2);
     }
 
     // Update item subtotal
