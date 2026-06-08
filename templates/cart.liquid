@@ -15,8 +15,17 @@
             <article class="cart-item" data-line-item="{{ forloop.index }}">
               
               <!-- Product Image -->
+              <!-- Product Image -->
               <div class="item-image">
-                {% if item.image %}
+                {% if item.variant.title contains 'Pink' %}
+                  <img src="{{ 'zen-pink.png' | asset_url }}" alt="{{ item.title }}" loading="lazy">
+                {% elsif item.variant.title contains 'Black' %}
+                  <img src="{{ 'zen-black.png' | asset_url }}" alt="{{ item.title }}" loading="lazy">
+                {% elsif item.variant.title contains 'White' %}
+                  <img src="{{ 'zen-white.png' | asset_url }}" alt="{{ item.title }}" loading="lazy">
+                {% elsif item.variant.title contains 'Walnut' %}
+                  <img src="{{ 'zen-walnut.png' | asset_url }}" alt="{{ item.title }}" loading="lazy">
+                {% elsif item.image %}
                   <img src="{{ item.image | img_url: '200x200' }}" alt="{{ item.title }}" loading="lazy">
                 {% else %}
                   <img src="{{ 'zen-pro-gallery-1.png' | asset_url }}" alt="{{ item.title }}" loading="lazy">
