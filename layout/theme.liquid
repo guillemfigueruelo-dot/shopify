@@ -103,6 +103,77 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
+        padding-top: 70px; /* Evita que el menú fijo tape el contenido */
+      }
+
+      /* ============================================
+         PREMIUM NAVIGATION HEADER
+         ============================================ */
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: rgba(250, 250, 250, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.01);
+      }
+
+      .header-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-logo {
+        font-size: 1.3rem;
+        font-weight: var(--font-weight-bold);
+        letter-spacing: -0.03em;
+        color: var(--color-text-primary);
+        text-transform: uppercase;
+      }
+
+      .header-nav {
+        display: flex;
+        gap: var(--space-md);
+      }
+
+      .nav-link {
+        font-size: 0.9rem;
+        font-weight: var(--font-weight-medium);
+        color: var(--color-text-secondary);
+        position: relative;
+        padding: 5px 0;
+      }
+
+      .nav-link:hover {
+        color: var(--color-text-primary);
+      }
+
+      .header-cart-icon {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: var(--font-weight-semibold);
+        background: var(--color-bg-secondary);
+        padding: 6px 14px;
+        border-radius: var(--radius-full);
+      }
+
+      @media (max-width: 600px) {
+        .header-nav {
+          display: none; /* Simplificación móvil clásica de Apple en landing pages */
+        }
       }
 
       /* ============================================
@@ -295,8 +366,28 @@
   </head>
 
   <body>
+
+    <!-- PREMIUM HORIZONTAL MENU (HEADER) -->
+    <header class="site-header">
+      <div class="header-container">
+        <a href="/" class="header-logo">ZeniaHome</a>
+        
+        <nav class="header-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <a href="/cart" class="header-cart-icon">
+          🛒 Cart ({{ cart.item_count }})
+        </a>
+      </div>
+    </header>
+  
     <main role="main">
       {{ content_for_layout }}
     </main>
-  {%- capture ecom_footer_content -%}{%- render 'ecom_footer' -%}{%- endcapture -%}{%- unless ecom_footer_content contains 'Liquid error' -%}{{ ecom_footer_content }}{%- endunless -%}</body>
+  {%- capture ecom_footer_content -%}{%- render 'ecom_footer' -%}{%- endcapture -%}{%- unless ecom_footer_content contains 'Liquid error' -%}{{ ecom_footer_content }}{%- endunless -%}
+  </body>
 </html>
