@@ -11,7 +11,7 @@
             <div class="carousel-slide {% if forloop.first %}active{% endif %}">
               <img 
                 src="{{ 'zen-pro-gallery-' | append: i | append: '.png' | asset_url }}" 
-                alt="ZenDesk Pro - Vista {{ i }}" 
+                alt="ZenDesk Pro - View {{ i }}" 
                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
               >
             </div>
@@ -19,12 +19,12 @@
         </div>
         
         <!-- Navigation Arrows -->
-        <button class="carousel-arrow carousel-prev" aria-label="Imagen anterior">
+        <button class="carousel-arrow carousel-prev" aria-label="Previous image">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M15 18l-6-6 6-6"/>
           </svg>
         </button>
-        <button class="carousel-arrow carousel-next" aria-label="Imagen siguiente">
+        <button class="carousel-arrow carousel-next" aria-label="Next image">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M9 18l6-6-6-6"/>
           </svg>
@@ -37,11 +37,11 @@
           <button 
             class="thumbnail {% if forloop.first %}active{% endif %}" 
             data-index="{{ forloop.index0 }}"
-            aria-label="Ir a imagen {{ i }}"
+            aria-label="Go to image {{ i }}"
           >
             <img 
               src="{{ 'zen-pro-gallery-' | append: i | append: '.png' | asset_url }}" 
-              alt="Miniatura {{ i }}"
+              alt="Thumbnail {{ i }}"
               loading="lazy"
             >
           </button>
@@ -52,27 +52,27 @@
     <!-- HERO CONTENT -->
     <div class="hero-content">
       <div class="hero-badge">
-        🔥 ¡40% DE DESCUENTO SOLO HOY!
+        🔥 40% OFF ONLY TODAY!
       </div>
       
       <h1 class="hero-title">
-        Trabaja con comodidad desde tu cama con <span class="text-accent">ZenDesk Pro</span>
+        Work with comfort from your bed with <span class="text-accent">ZenDesk Pro</span>
       </h1>
       
       <h2 class="hero-subtitle">
-        El escritorio multifuncional que transforma tu descanso en productividad extrema.
+        The multifunctional desk that transforms your rest into extreme productivity.
       </h2>
       
       <ul class="hero-features">
-        <li>✓ Diseño ergonómico ajustable</li>
-        <li>✓ Materiales premium de alta calidad</li>
-        <li>✓ Estilo minimalista IKEA × Apple</li>
+        <li>✓ Adjustable ergonomic design</li>
+        <li>✓ Premium high-quality materials</li>
+        <li>✓ Minimalist IKEA × Apple style</li>
       </ul>
 
       <!-- SHOPIFY PRODUCT FORM -->
       {% form 'product', product %}
         <div class="variant-selector">
-          <p class="variant-label">Elige tu color favorito:</p>
+          <p class="variant-label">Choose your favorite color:</p>
           <div class="variant-swatches">
             {% for variant in product.variants %}
               <label class="swatch-wrapper">
@@ -97,13 +97,13 @@
         </div>
 
         <button type="submit" name="add" class="hero-cta">
-          ¡Quiero mi ZenDesk Pro ahora!
+          I want my ZenDesk Pro now!
         </button>
       {% endform %}
       
       <div class="hero-trust-badges">
-        <span>🚚 Envío rápido garantizado</span>
-        <span>🔒 Compra 100% segura</span>
+        <span>🚚 Fast shipping guaranteed</span>
+        <span>🔒 100% secure purchase</span>
       </div>
     </div>
 

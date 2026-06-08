@@ -8,10 +8,10 @@
       <!-- Headline con urgencia -->
       <div class="oferta-headline">
         <div class="urgency-badge">
-          ⚡ OFERTA FLASH ACTIVA
+          ⚡ FLASH SALE ACTIVE
         </div>
-        <h2 class="oferta-title">¡Aprovecha el 43% de descuento!</h2>
-        <p class="oferta-subtitle">Esta oferta especial es exclusiva para visitantes de TikTok</p>
+        <h2 class="oferta-title">Take advantage of the 43% discount!</h2>
+        <p class="oferta-subtitle">This special offer is exclusive to TikTok visitors</p>
       </div>
 
       <!-- Precio destacado -->
@@ -21,16 +21,16 @@
           <span class="price-discount-badge">-43%</span>
         </div>
         <div class="price-current">€39,99</div>
-        <p class="price-note">Envío rápido incluido</p>
+        <p class="price-note">Fast shipping included</p>
       </div>
 
       <!-- Barra de stock progresiva -->
       <div class="stock-container">
         <div class="stock-info">
           <span class="stock-alert">
-            🔥 ¡Corre! Solo quedan <strong id="stock-count">17</strong> unidades
+            🔥 Hurry! Only <strong id="stock-count">17</strong> units left
           </span>
-          <span class="stock-percentage">82% vendido</span>
+          <span class="stock-percentage">82% sold</span>
         </div>
         <div class="progress-bar">
           <div class="progress-fill" style="width: 82%;">
@@ -43,8 +43,8 @@
       <div class="urgency-box">
         <div class="urgency-icon">⏳</div>
         <div class="urgency-text">
-          <strong>Esta oferta expira el:</strong>
-          <span id="dynamic-expiry-date" class="expiry-date">Calculando...</span>
+          <strong>This offer expires on:</strong>
+          <span id="dynamic-expiry-date" class="expiry-date">Calculating...</span>
         </div>
       </div>
 
@@ -52,7 +52,7 @@
       {% form 'product', product %}
         
         <div class="variant-selector">
-          <p class="variant-label">Elige tu color favorito:</p>
+          <p class="variant-label">Choose your favorite color:</p>
           <div class="variant-swatches">
             {% for variant in product.variants %}
               <label class="swatch-option">
@@ -78,7 +78,7 @@
 
         <button type="submit" name="add" class="oferta-cta">
           <span class="cta-icon">🛒</span>
-          <span>¡Sí, quiero mi descuento ahora!</span>
+          <span>Yes, I want my discount now!</span>
         </button>
 
       {% endform %}
@@ -87,15 +87,15 @@
       <div class="trust-badges">
         <div class="trust-item">
           <span class="trust-icon">✓</span>
-          <span>Garantía 30 días</span>
+          <span>30-day guarantee</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">✓</span>
-          <span>Pago seguro SSL</span>
+          <span>SSL secure payment</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">✓</span>
-          <span>Envío rápido</span>
+          <span>Fast shipping</span>
         </div>
       </div>
 
@@ -548,7 +548,7 @@
 
     const dateElement = document.getElementById('dynamic-expiry-date');
     if (dateElement) {
-      dateElement.textContent = expiryDate.toLocaleDateString('es-ES', options);
+      dateElement.textContent = expiryDate.toLocaleDateString('en-US', options);
     }
   })();
 </script>
