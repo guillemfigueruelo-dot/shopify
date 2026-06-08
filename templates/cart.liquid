@@ -1,30 +1,42 @@
-{% if cart.item_count > 0 %}
-  <div class="cart-page" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-    <h1>Your Cart</h1>
-    
-    <form action="/cart" method="post">
-      {% for item in cart.items %}
-        <div class="cart-item" style="display: flex; gap: 1rem; padding: 1rem; border-bottom: 1px solid #eee;">
-          <img src="{{ item.image | img_url: '100x100' }}" alt="{{ item.title }}">
-          <div style="flex: 1;">
-            <h3>{{ item.product.title }}</h3>
-            <p>{{ item.variant.title }}</p>
-            <p>{{ item.price | money }}</p>
-            <input type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+<div class="cart-page-container" style="max-width: 800px; margin: 60px auto; padding: 20px; font-family: 'Inter', sans-serif; color: #1A1A1A; background-color: #FAFAFA;">
+  <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 30px; border-bottom: 1px solid #E5E5E5; padding-bottom: 15px;">Your Shopping Cart</h1>
+
+  {% if cart.item_count == 0 %}
+    <div style="text-align: center; padding: 40px 0;">
+      <p style="font-size: 1.1rem; color: #666; margin-bottom: 20px;">Your cart is currently empty.</p>
+      <a href="/" style="display: inline-block; background-color: #1A1A1A; color: #FFF; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: 600;">Continue Shopping</a>
+    </div>
+  {% else %}
+    <form action="/cart" method="post" novalidate>
+      <div style="background: #FFF; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); margin-bottom: 30px;">
+        {% for item in cart.items %}
+          <div style="display: flex; gap: 20px; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #F0F0F0; margin-bottom: 20px;">
+            <img src="{{ item.image | image_url: width: 120 }}" alt="{{ item.title }}" style="border-radius: 6px; border: 1px solid #E5E5E5; max-width: 100px;">
+            <div style="flex-grow: 1;">
+              <h2 style="font-size: 1.1rem; margin: 0 0 5px 0;">{{ item.product.title }}</h2>
+              <p style="color: #666; font-size: 0.9rem; margin: 0 0 10px 0;">Color: {{ item.variant.title }}</p>
+              <span style="font-weight: 600;">{{ item.final_line_price | money }}</span>
+            </div>
+            <div>
+              <label for="updates_{{ item.key }}" style="display:block; font-size: 0.8rem; color:#666; margin-bottom:4px;">Qty:</label>
+              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" style="width: 50px; padding: 6px; border: 1px solid #CCC; border-radius: 4px; text-align: center;">
+            </div>
           </div>
+        {% endfor %}
+      </div>
+
+      <div style="text-align: right; background: #FFF; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <p style="font-size: 1.2rem; margin: 0 0 20px 0;">Total Subtotal: <strong style="font-size: 1.4rem;">{{ cart.total_price | money }}</strong></p>
+        
+        <button type="submit" name="checkout" style="background-color: #2D8F4E; color: #FFF; border: none; padding: 16px 40px; font-size: 1.1rem; font-weight: 700; border-radius: 6px; cursor: pointer; width: 100%; max-width: 350px; transition: background 0.2s;">
+          PROCEED TO CHECKOUT →
+        </button>
+        
+        <div style="margin-top: 15px; color: #666; font-size: 0.85rem; display: flex; justify-content: flex-end; gap: 15px;">
+          <span>🔒 100% Secure Checkout</span>
+          <span>🚚 Free Shipping Included</span>
         </div>
-      {% endfor %}
-      
-      <div style="text-align: right; padding: 2rem 0;">
-        <h2>Total: {{ cart.total_price | money }}</h2>
-        <button type="submit" name="update" style="margin-right: 1rem;">Update Cart</button>
-        <button type="submit" name="checkout" style="background: #2D8F4E; color: white; padding: 1rem 2rem; border: none; cursor: pointer;">Checkout</button>
       </div>
     </form>
-  </div>
-{% else %}
-  <div style="text-align: center; padding: 4rem;">
-    <h1>Your cart is empty</h1>
-    <a href="/" style="color: #2D8F4E;">Continue shopping</a>
-  </div>
-{% endif %}
+  {% endif %}
+</div>
